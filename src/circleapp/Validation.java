@@ -84,7 +84,7 @@ public class Validation
             }
             else
             {
-                System.out.println("Error! Invalid double value. Try again.");
+                System.out.println("Error! Invalid decimal value. Try again.");
             }
             sc.nextLine();
         }
@@ -105,7 +105,7 @@ public class Validation
             double d = getDouble(prompt);
             if (d < min || d > max)
             {
-                System.out.println("Error! Integer must be from " + min + " to " + max);
+                System.out.println("Error! Decimal value must be from " + min + " to " + max);
             }
             else
             {
