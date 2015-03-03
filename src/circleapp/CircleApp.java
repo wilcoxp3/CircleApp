@@ -15,8 +15,12 @@ public class CircleApp
      */
     public static void main(String[] args)
     {
-        System.out.println("Welcome to the Circle Tester\n");
-        System.out.print("Enter radius: ")
+        while (true)
+        {       
+            System.out.println("Welcome to the Circle Tester\n");
+            double radius = Validation.getDouble("Enter radius: ", 0.0, 1000000000000.0);
+            Circle
+        }       
     }
     
 }

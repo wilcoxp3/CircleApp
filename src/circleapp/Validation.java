@@ -52,11 +52,7 @@ public class Validation
         while (true)
         {
             int i = getInt(prompt);
-            if (i < min)
-            {
-                System.out.println("Error! Integer must be from " + min + " to " + max);
-            }
-            else if (i > max)
+            if (i < min || i > max)
             {
                 System.out.println("Error! Integer must be from " + min + " to " + max);
             }
@@ -73,7 +69,26 @@ public class Validation
      */
     public static double getDouble(String prompt)
     {
+        //create new Scanner object and declare and initialize user choice to 0
+        Scanner sc = new Scanner(System.in);
+        double d = 0.0;
         
+        //loop until user enters a valid int
+        while (true)
+        {
+            System.out.print(prompt);
+            if (sc.hasNextDouble())
+            {
+                d = sc.nextDouble();
+                break;
+            }
+            else
+            {
+                System.out.println("Error! Invalid double value. Try again.");
+            }
+            sc.nextLine();
+        }
+        return d;
     }
     /**
      * getDouble
@@ -85,7 +100,18 @@ public class Validation
      */
     public static double getDouble(String prompt, double min, double max)
     {
-        
+        while (true)
+        {
+            double d = getDouble(prompt);
+            if (d < min || d > max)
+            {
+                System.out.println("Error! Integer must be from " + min + " to " + max);
+            }
+            else
+            {
+                return d;
+            }
+        }
     }
     
     /**

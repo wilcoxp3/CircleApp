@@ -15,6 +15,7 @@ public class Circle
     protected double radius;
     protected double circumference;
     protected double area;
+    
     protected static int objectCount = 0;
     
     public Circle(double radius)
