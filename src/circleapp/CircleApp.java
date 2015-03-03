@@ -15,12 +15,20 @@ public class CircleApp
      */
     public static void main(String[] args)
     {
+        System.out.println("Welcome to the Circle Tester");
         while (true)
         {       
-            System.out.println("Welcome to the Circle Tester\n");
-            double radius = Validation.getDouble("Enter radius: ", 0.0, 1000000000000.0);
-            Circle
-        }       
+            double radius = Validation.getDouble("\nEnter radius: ", 0.0, 1000000000000.0);
+            Circle myCircle = new Circle(radius);
+            System.out.println("Circumference: " + myCircle.getFormattedCircumference());
+            System.out.println("Area:          " + myCircle.getFormattedArea());
+            
+            if (Validation.getContinue("\nContinue? (y/n): ") == false)
+            {
+                System.out.println("\nGoodbye. You created " + Circle.getObjectCount() + " Circle object(s).");
+                break;
+            }
+        }
+        System.out.println("DONE");
     }
-    
 }

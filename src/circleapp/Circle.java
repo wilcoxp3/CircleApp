@@ -48,8 +48,8 @@ public class Circle
     
     private String formatNumber(double unformattedNumber)
     {
-        String formattedNumber = String.format(Double.toString(unformattedNumber), "%.1f");
-        return formattedNumber;     
+        String formattedNumber = String.format("%.1f", unformattedNumber);
+        return formattedNumber; 
     }
     
     public static int getObjectCount()
