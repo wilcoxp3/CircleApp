@@ -1,23 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package circleapp;
 
 /**
  *
  * @author wilcoxp3
+ * The Circle class is used to create objects representing circles. With fields
+ * radius, circumference, and area to define the circle. The static field
+ * objectCount keeps a count of how many Circle objects have been created. The
+ * class also contains getters for radius, circumference, area, and objectCount,
+ * as well as getters for circumference and area which format the number as a
+ * string with only one digit after the decimal.
  */
 public class Circle
 {
-    protected double radius;
-    protected double circumference;
-    protected double area;
+    //fields for the circle's radius, circumference, and area
+    private double radius;
+    private double circumference;
+    private double area;
     
-    protected static int objectCount = 0;
+    //static field to keep track of how many circle objects have been created
+    private static int objectCount = 0;
     
+    //constructor for circle which accepts the radius and calculates the
+    //circumference and area using appropriate formulas, then increments
+    //objectCount
     public Circle(double radius)
     {
         this.radius = radius;
@@ -26,32 +32,38 @@ public class Circle
         objectCount++;
     }
     
+    //getter for circumference
     public double getCircumference()
     {
         return circumference;
     }
     
+    //getter for the formatted circumference
     public String getFormattedCircumference()
     {
         return formatNumber(circumference);
     }
     
+    //getter for area
     public double getArea()
     {
         return area;
     }
     
+    //getter for the formatted area
     public String getFormattedArea()
     {
         return formatNumber(area);
     }
     
+    //formats a double as a String with 1 place after the decimal
     private String formatNumber(double unformattedNumber)
     {
         String formattedNumber = String.format("%.1f", unformattedNumber);
         return formattedNumber; 
     }
     
+    //getter for objectCount
     public static int getObjectCount()
     {
         return objectCount;
