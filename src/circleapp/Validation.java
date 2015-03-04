@@ -62,6 +62,7 @@ public class Validation
             }
         }
     }
+    
     /** getDouble
      * prompts user to enter a valid double
      * @param prompt
