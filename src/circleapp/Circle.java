@@ -14,9 +14,9 @@ package circleapp;
 public class Circle
 {
     //fields for the circle's radius, circumference, and area
-    private double radius;
-    private double circumference;
-    private double area;
+    private final double radius;
+    private final double circumference;
+    private final double area;
     
     //static field to keep track of how many circle objects have been created
     private static int objectCount = 0;
