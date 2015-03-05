@@ -1,5 +1,5 @@
 
-/*
+/**
 * Project 7-2: Circle
 * Professor: Tedd Sperling
 * Course: Introduction to JAVA - (22150)

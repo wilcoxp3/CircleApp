@@ -11,6 +11,7 @@ package circleapp;
  * as well as getters for circumference and area which format the number as a
  * string with only one digit after the decimal.
  */
+import java.text.NumberFormat;
 public class Circle
 {
     //fields for the circle's radius, circumference, and area
@@ -59,8 +60,9 @@ public class Circle
     //formats a double as a String with 1 place after the decimal
     private String formatNumber(double unformattedNumber)
     {
-        String formattedNumber = String.format("%.1f", unformattedNumber);
-        return formattedNumber; 
+        NumberFormat formattedNumber = NumberFormat.getNumberInstance();
+        formattedNumber.setMaximumFractionDigits(1);
+        return formattedNumber.format(unformattedNumber);
     }
     
     //getter for objectCount
