@@ -22,7 +22,7 @@ public class CircleApp
         while (true)
         {
             //Get from the user a valid double within a reasonable range.
-            double radius = Validation.getDouble("\nEnter radius: ", 0.0, 1000000000000.0);
+            double radius = Math.abs(Validation.getDouble("\nEnter radius: "));
             
             //Create Circle object myCircle
             Circle myCircle = new Circle(radius);
