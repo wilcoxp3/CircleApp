@@ -21,7 +21,7 @@ public class CircleApp
         System.out.println("Welcome to the Circle Tester");
         while (true)
         {
-            //Get from the user a valid double within a reasonable range.
+            //Get a valid positive double from the user
             double radius = Math.abs(Validation.getDouble("\nEnter radius: "));
             
             //Create Circle object myCircle
