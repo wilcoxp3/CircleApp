@@ -115,6 +115,7 @@ public class Validation
         }
     }
     
+    
     /**
      * getContinue
      * prompts the user to continue by entering 'y' or 'n'
